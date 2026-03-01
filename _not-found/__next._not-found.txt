@@ -1,4 +1,4 @@
 1:"$Sreact.fragment"
-2:I[68535,["/_next/static/chunks/d6e7ef47cef8cc0f.js"],"default"]
-3:I[83426,["/_next/static/chunks/d6e7ef47cef8cc0f.js"],"default"]
-0:{"buildId":"_OhUHkdGj3vNM1KvaWl2f","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
+2:I[68535,["/la-healthy-mit/_next/static/chunks/d6e7ef47cef8cc0f.js"],"default"]
+3:I[83426,["/la-healthy-mit/_next/static/chunks/d6e7ef47cef8cc0f.js"],"default"]
+0:{"buildId":"uMcgItdhwuNnoaqZgGRLe","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
