@@ -1,3 +1,5 @@
+import { img } from "@/lib/constants";
+
 const WHATSAPP_BASE =
   "https://wa.me/51994885883?text=";
 
@@ -65,7 +67,7 @@ export default function Products() {
               {/* Image */}
               <div className="relative h-56 sm:h-64 overflow-hidden">
                 <img
-                  src={product.image}
+                  src={img(product.image)}
                   alt={`${product.name} de crianza libre`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />

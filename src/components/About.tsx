@@ -1,3 +1,5 @@
+import { img } from "@/lib/constants";
+
 export default function About() {
   return (
     <section id="nosotros" className="py-20 sm:py-28 bg-cream">
@@ -7,7 +9,7 @@ export default function About() {
           <div className="scroll-animate-left relative">
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="/images/farm-aerial.webp"
+                src={img("/images/farm-aerial.webp")}
                 alt="Granja de crianza libre La Healthy Mit"
                 className="w-full h-[350px] sm:h-[450px] object-cover"
               />

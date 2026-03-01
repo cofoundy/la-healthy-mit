@@ -1,3 +1,5 @@
+import { img } from "@/lib/constants";
+
 const WHATSAPP_URL =
   "https://wa.me/51994885883?text=Hola%2C%20me%20interesa%20hacer%20un%20pedido%20%F0%9F%8C%BF";
 
@@ -10,7 +12,7 @@ export default function Hero() {
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
+        style={{ backgroundImage: `url('${img("/images/hero-bg.webp")}')` }}
       />
 
       {/* Overlay gradient */}
