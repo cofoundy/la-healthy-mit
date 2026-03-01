@@ -1,0 +1,229 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors - La Healthy Mit */
+  --color-green-dark: #2D5A27;
+  --color-green-mid: #3D7A35;
+  --color-green-light: #5A9E50;
+  --color-olive: #8B8B3A;
+  --color-beige: #D4C5A0;
+  --color-beige-light: #F5F0E4;
+  --color-cream: #FDFBF5;
+  --color-brown: #5C4A2A;
+  --color-brown-light: #8B7355;
+  --color-text: #2A2A2A;
+  --color-text-light: #5C5C5C;
+  --color-white: #FFFFFF;
+
+  /* Fonts */
+  --font-display: "Playfair Display", serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-script: "Dancing Script", cursive;
+}
+
+@theme inline {
+  --color-green-dark: var(--color-green-dark);
+  --color-green-mid: var(--color-green-mid);
+  --color-green-light: var(--color-green-light);
+  --color-olive: var(--color-olive);
+  --color-beige: var(--color-beige);
+  --color-beige-light: var(--color-beige-light);
+  --color-cream: var(--color-cream);
+  --color-brown: var(--color-brown);
+  --color-brown-light: var(--color-brown-light);
+  --color-text: var(--color-text);
+  --color-text-light: var(--color-text-light);
+}
+
+/* Base */
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: clip;
+  background: var(--color-cream);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
+
+/* Scroll Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes heroEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(45, 90, 39, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(45, 90, 39, 0); }
+}
+
+/* Hero animations */
+.hero-animate {
+  animation: heroEntrance 0.8s ease-out both;
+}
+.hero-animate-delay-1 { animation-delay: 0.2s; }
+.hero-animate-delay-2 { animation-delay: 0.4s; }
+.hero-animate-delay-3 { animation-delay: 0.6s; }
+
+/* Scroll reveal */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.scroll-animate-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.scroll-animate-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.scroll-animate-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.scroll-animate-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.scroll-animate-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.scroll-animate-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delays */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+
+/* Float animation */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* WhatsApp pulse */
+.animate-pulse-green {
+  animation: pulse-green 2s ease-in-out infinite;
+}
+
+/* Card hover */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(45, 90, 39, 0.15);
+}
+
+/* Button hover */
+.btn-primary {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(45, 90, 39, 0.3);
+}
+
+/* Wave transition */
+.wave-divider {
+  position: relative;
+}
+.wave-divider::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-animate,
+  .scroll-animate,
+  .scroll-animate-left,
+  .scroll-animate-right,
+  .scroll-animate-scale {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .animate-float,
+  .animate-pulse-green {
+    animation: none !important;
+  }
+}
