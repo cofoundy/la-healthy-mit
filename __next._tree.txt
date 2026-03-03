@@ -6,4 +6,4 @@
 :HL["/la-healthy-mit/images/product-gallina.webp","image"]
 :HL["/la-healthy-mit/images/product-pato.webp","image"]
 :HL["/la-healthy-mit/images/product-cuy.webp","image"]
-0:{"buildId":"AXzOAFD3YDZtHqDmVZNWs","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"l6YNvRnER-Kf2asf_p4ui","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
