@@ -23,7 +23,7 @@ export default function Hero() {
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         {/* Logo mark */}
         <div className="hero-animate flex justify-center mb-4">
-          <Logo className="w-14 h-14 sm:w-16 sm:h-16" color="#B2D78B" />
+          <Logo className="w-14 h-14 sm:w-16 sm:h-16" variant="light" />
         </div>
 
         {/* Brand name */}

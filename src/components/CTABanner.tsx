@@ -17,7 +17,7 @@ export default function CTABanner() {
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="scroll-animate">
-          <Logo className="w-12 h-12 mx-auto mb-6" color="#F5F0E4" />
+          <Logo className="w-12 h-12 mx-auto mb-6" variant="light" />
 
           <h2
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight"

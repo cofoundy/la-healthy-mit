@@ -35,7 +35,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-2">
-            <Logo className="w-8 h-8 sm:w-9 sm:h-9" />
+            <Logo className="w-8 h-8 sm:w-9 sm:h-9" variant={scrolled ? "dark" : "light"} />
             <span
               className={`text-xl sm:text-2xl font-bold transition-colors duration-300 ${
                 scrolled ? "text-green-dark" : "text-white"
