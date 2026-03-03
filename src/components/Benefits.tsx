@@ -14,7 +14,7 @@ const benefits = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
-    title: "Sin hormonas",
+    title: "Sin hormonas ni químicos",
     description: "Cero hormonas de crecimiento, cero antibióticos. Solo alimentación natural y agua limpia.",
   },
   {
@@ -57,17 +57,17 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section className="relative py-20 sm:py-28 bg-green-deep overflow-hidden">
+    <section className="py-20 sm:py-28 bg-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center scroll-animate">
           <span className="text-sm font-semibold tracking-widest text-olive uppercase">
-            Nuestros Valores
+            ¿Por qué elegirnos?
           </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-beige">
+          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-green-dark">
             La diferencia está en el cuidado
           </h2>
-          <p className="mt-4 text-beige/60 text-lg max-w-2xl mx-auto">
+          <p className="mt-4 text-text-mid text-lg max-w-2xl mx-auto">
             Cada detalle importa cuando se trata de alimentar a tu familia con lo mejor.
           </p>
         </div>
@@ -77,18 +77,14 @@ export default function Benefits() {
           {benefits.map((benefit, i) => (
             <div
               key={benefit.title}
-              className={`scroll-animate stagger-${(i % 6) + 1} brown-card rounded-2xl p-6 flex gap-5`}
+              className={`scroll-animate-scale stagger-${(i % 6) + 1} flex gap-5 p-6 rounded-2xl bg-white border border-beige-dark/50 card-hover`}
             >
-              <div className="shrink-0 w-12 h-12 rounded-xl bg-green-light/15 flex items-center justify-center text-green-light">
+              <div className="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center text-green-dark icon-hover">
                 {benefit.icon}
               </div>
               <div>
-                <h3 className="text-lg font-bold text-beige">
-                  {benefit.title}
-                </h3>
-                <p className="mt-2 text-beige/50 text-sm leading-relaxed">
-                  {benefit.description}
-                </p>
+                <h3 className="text-lg font-bold text-green-dark">{benefit.title}</h3>
+                <p className="mt-2 text-text-mid text-sm leading-relaxed">{benefit.description}</p>
               </div>
             </div>
           ))}

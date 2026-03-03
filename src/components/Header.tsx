@@ -27,7 +27,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-green-deep/95 backdrop-blur-md shadow-lg shadow-black/20"
+          ? "bg-cream/95 backdrop-blur-md shadow-sm"
           : "bg-transparent"
       }`}
     >
@@ -35,9 +35,11 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-2">
-            <Logo className="w-8 h-8" color="#B2D78B" />
+            <Logo className="w-8 h-8 sm:w-9 sm:h-9" />
             <span
-              className="text-xl sm:text-2xl font-bold text-green-light"
+              className={`text-xl sm:text-2xl font-bold transition-colors duration-300 ${
+                scrolled ? "text-green-dark" : "text-white"
+              }`}
               style={{ fontFamily: "var(--font-script)" }}
             >
               La Healthy Mit
@@ -50,7 +52,9 @@ export default function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-beige/70 hover:text-green-light transition-colors duration-300"
+                className={`nav-link text-sm font-medium transition-colors duration-300 ${
+                  scrolled ? "text-text-mid hover:text-green-dark" : "text-white/90 hover:text-white"
+                }`}
               >
                 {item.label}
               </a>
@@ -59,7 +63,7 @@ export default function Header() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-dark hover:bg-green-mid text-white px-5 py-2.5 rounded-full text-sm font-semibold btn-primary border border-green-light/20"
+              className="bg-green-dark text-white px-5 py-2.5 rounded-full text-sm font-semibold btn-primary"
             >
               Contáctanos
             </a>
@@ -68,7 +72,9 @@ export default function Header() {
           {/* Mobile Hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden p-2 text-beige/80"
+            className={`md:hidden p-2 transition-colors ${
+              scrolled ? "text-text" : "text-white"
+            }`}
             aria-label="Menú"
           >
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -84,14 +90,14 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-green-deep/95 backdrop-blur-md border-t border-green-light/10">
+        <div className="md:hidden bg-cream/95 backdrop-blur-md border-t border-beige-dark/50">
           <div className="px-4 py-4 space-y-3">
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className="block text-beige/80 font-medium py-2 hover:text-green-light transition-colors"
+                className="block text-text font-medium py-2 hover:text-green-dark transition-colors"
               >
                 {item.label}
               </a>
@@ -100,7 +106,7 @@ export default function Header() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-green-dark text-white text-center px-5 py-3 rounded-full font-semibold border border-green-light/20"
+              className="block bg-green-dark text-white text-center px-5 py-3 rounded-full font-semibold"
             >
               Contáctanos
             </a>

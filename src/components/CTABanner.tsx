@@ -10,17 +10,9 @@ export default function CTABanner() {
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-green-dark via-green-mid to-green-dark" />
 
-      {/* Decorative leaves */}
-      <div className="absolute top-0 left-0 w-40 h-60 opacity-10">
-        <svg viewBox="0 0 160 240" fill="none">
-          <path d="M80 0C40 40 0 90 10 160c5 35 25 55 45 70 10-25 18-60 18-100 0 40 8 75 18 100 20-15 40-35 45-70C146 90 120 40 80 0z" fill="#B2D78B" />
-        </svg>
-      </div>
-      <div className="absolute bottom-0 right-0 w-40 h-60 opacity-10 scale-x-[-1]">
-        <svg viewBox="0 0 160 240" fill="none">
-          <path d="M80 0C40 40 0 90 10 160c5 35 25 55 45 70 10-25 18-60 18-100 0 40 8 75 18 100 20-15 40-35 45-70C146 90 120 40 80 0z" fill="#B2D78B" />
-        </svg>
-      </div>
+      {/* Decorative circles */}
+      <div className="absolute top-10 left-10 w-40 h-40 rounded-full bg-white/5" />
+      <div className="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-white/5" />
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -38,7 +30,7 @@ export default function CTABanner() {
             del campo?
           </h2>
 
-          <p className="mt-6 text-lg sm:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-6 text-lg sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
             Conoce más sobre nuestra crianza libre y haz tu consulta directamente por WhatsApp o encuéntranos en Instagram.
           </p>
 
@@ -67,11 +59,21 @@ export default function CTABanner() {
             </a>
           </div>
 
-          <p className="mt-5 text-white/40 text-sm">
+          <p className="mt-5 text-white/50 text-sm">
             Respuesta inmediata &middot; Envío disponible
           </p>
         </div>
       </div>
+
+      {/* Wave divider to footer */}
+      <svg
+        className="absolute bottom-0 left-0 w-full"
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        fill="var(--color-cream)"
+      >
+        <path d="M0,40L60,35C120,30,240,20,360,25C480,30,600,50,720,55C840,60,960,50,1080,40C1200,30,1320,20,1380,15L1440,10L1440,80L0,80Z" />
+      </svg>
     </section>
   );
 }
