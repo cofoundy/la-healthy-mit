@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 const WHATSAPP_URL =
-  "https://wa.me/51994885883?text=Hola%2C%20quiero%20hacer%20un%20pedido%20%F0%9F%8C%BF";
+  "https://wa.me/51994885883?text=Hola%2C%20me%20interesa%20conocer%20más%20sobre%20La%20Healthy%20Mit%20%F0%9F%8C%BF";
 
 export default function WhatsAppFloat() {
   const [visible, setVisible] = useState(false);
@@ -20,7 +20,7 @@ export default function WhatsAppFloat() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
-      className={`fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 animate-pulse-green ${
+      className={`fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg shadow-[#25D366]/30 transition-all duration-300 hover:scale-110 animate-pulse-green ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
       }`}
     >
