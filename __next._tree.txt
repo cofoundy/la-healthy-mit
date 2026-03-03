@@ -1,8 +1,8 @@
-:HL["/la-healthy-mit/_next/static/chunks/d657f67183069535.css","style"]
+:HL["/la-healthy-mit/_next/static/chunks/b78a09fb7407c356.css","style"]
 :HL["https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@400;500;600;700&display=swap","style"]
 :HL["/la-healthy-mit/images/farm-aerial.webp","image"]
 :HL["/la-healthy-mit/images/product-pollo.webp","image"]
 :HL["/la-healthy-mit/images/product-gallina.webp","image"]
 :HL["/la-healthy-mit/images/product-pato.webp","image"]
 :HL["/la-healthy-mit/images/product-cuy.webp","image"]
-0:{"buildId":"uMcgItdhwuNnoaqZgGRLe","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"Te6NiY47G_RoWyxjJ47pH","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
