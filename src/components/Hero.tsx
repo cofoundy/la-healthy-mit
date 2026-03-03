@@ -17,7 +17,7 @@ export default function Hero() {
       />
 
       {/* Warm overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-green-dark/70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-green-dark/75" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
