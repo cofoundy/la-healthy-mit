@@ -1,8 +1,9 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
+import Philosophy from "@/components/Philosophy";
 import Products from "@/components/Products";
-import Benefits from "@/components/Benefits";
+import Promise from "@/components/Promise";
+import Process from "@/components/Process";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -15,9 +16,10 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <About />
+        <Philosophy />
         <Products />
-        <Benefits />
+        <Promise />
+        <Process />
         <CTABanner />
       </main>
       <Footer />

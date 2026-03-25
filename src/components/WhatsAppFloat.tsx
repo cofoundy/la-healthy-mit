@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 const WHATSAPP_URL =
-  "https://wa.me/51994885883?text=Hola%2C%20me%20interesa%20conocer%20más%20sobre%20La%20Healthy%20Mit%20%F0%9F%8C%BF";
+  "https://wa.me/51984300441?text=Hola%2C%20me%20interesa%20conocer%20más%20sobre%20La%20Healthy%20Mit%20🌿";
 
 export default function WhatsAppFloat() {
   const [visible, setVisible] = useState(false);

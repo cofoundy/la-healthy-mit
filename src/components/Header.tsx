@@ -7,11 +7,12 @@ const NAV_ITEMS = [
   { label: "Inicio", href: "#inicio" },
   { label: "Nosotros", href: "#nosotros" },
   { label: "Productos", href: "#productos" },
+  { label: "Nuestro Proceso", href: "#proceso" },
   { label: "Contacto", href: "#contacto" },
 ];
 
 const WHATSAPP_URL =
-  "https://wa.me/51994885883?text=Hola%2C%20me%20interesa%20conocer%20más%20sobre%20La%20Healthy%20Mit%20%F0%9F%8C%BF";
+  "https://wa.me/51984300441?text=Hola%2C%20me%20interesa%20conocer%20más%20sobre%20La%20Healthy%20Mit%20🌿";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -25,35 +26,45 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-cream/95 backdrop-blur-md shadow-sm"
+          ? "bg-warm-white/95 backdrop-blur-md shadow-sm"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Logo */}
-          <a href="#inicio" className="flex items-center gap-2">
-            <Logo className="w-8 h-8 sm:w-9 sm:h-9" variant={scrolled ? "dark" : "light"} />
-            <span
-              className={`text-xl sm:text-2xl font-bold transition-colors duration-300 ${
-                scrolled ? "text-green-dark" : "text-white"
-              }`}
-              style={{ fontFamily: "var(--font-script)" }}
-            >
-              La Healthy Mit
-            </span>
+          {/* Logo + Brand */}
+          <a href="#inicio" className="flex items-center gap-3">
+            <Logo className="w-9 h-9 sm:w-10 sm:h-10" variant={scrolled ? "dark" : "light"} />
+            <div className="flex flex-col leading-none">
+              <span
+                className={`text-lg sm:text-xl font-bold transition-colors duration-300 ${
+                  scrolled ? "text-green-dark" : "text-white"
+                }`}
+                style={{ fontFamily: "var(--font-script)" }}
+              >
+                La Healthy Mit
+              </span>
+              <span
+                className={`text-[9px] sm:text-[10px] tracking-[0.2em] uppercase transition-colors duration-300 ${
+                  scrolled ? "text-olive" : "text-white/60"
+                }`}
+                style={{ fontFamily: "var(--font-display)" }}
+              >
+                Crianza Libre
+              </span>
+            </div>
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-7">
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className={`nav-link text-sm font-medium transition-colors duration-300 ${
-                  scrolled ? "text-text-mid hover:text-green-dark" : "text-white/90 hover:text-white"
+                className={`nav-link text-sm font-medium tracking-wide transition-colors duration-300 ${
+                  scrolled ? "text-text-mid hover:text-green-dark" : "text-white/85 hover:text-white"
                 }`}
               >
                 {item.label}
@@ -63,16 +74,16 @@ export default function Header() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-dark text-white px-5 py-2.5 rounded-full text-sm font-semibold btn-primary"
+              className="bg-green-dark text-white px-5 py-2.5 rounded-full text-sm font-semibold btn-primary hover:bg-green-mid"
             >
-              Contáctanos
+              Haz tu pedido
             </a>
           </nav>
 
           {/* Mobile Hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className={`md:hidden p-2 transition-colors ${
+            className={`lg:hidden p-2 transition-colors ${
               scrolled ? "text-text" : "text-white"
             }`}
             aria-label="Menú"
@@ -90,14 +101,14 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-cream/95 backdrop-blur-md border-t border-beige-dark/50">
-          <div className="px-4 py-4 space-y-3">
+        <div className="lg:hidden bg-warm-white/98 backdrop-blur-md border-t border-beige-dark/30">
+          <div className="px-4 py-5 space-y-1">
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className="block text-text font-medium py-2 hover:text-green-dark transition-colors"
+                className="block text-text font-medium py-3 px-3 rounded-lg hover:bg-beige hover:text-green-dark transition-colors"
               >
                 {item.label}
               </a>
@@ -106,9 +117,9 @@ export default function Header() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-green-dark text-white text-center px-5 py-3 rounded-full font-semibold"
+              className="block bg-green-dark text-white text-center px-5 py-3.5 rounded-full font-semibold mt-3"
             >
-              Contáctanos
+              Haz tu pedido
             </a>
           </div>
         </div>
